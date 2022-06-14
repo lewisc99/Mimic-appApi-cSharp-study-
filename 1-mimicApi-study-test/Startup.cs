@@ -55,6 +55,7 @@ namespace _1_mimicApi_study_test
                 cfg =>
                 {
                     cfg.ReportApiVersions = true;
+                    cfg.AssumeDefaultVersionWhenUnspecified = true;
                     cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
                 });
 

@@ -18,7 +18,8 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
     [ApiController]
     [Route("/api/v{version:apiVersion}/[controller]")]
-    [ApiVersion("1.0")]
+    [ApiVersion("1.0",Deprecated = true)]
+    [ApiVersion("1.1")]
 
 
     public class PalavrasController : ControllerBase
@@ -36,11 +37,11 @@ namespace _1_mimicApi_study_test.V1.Controllers
         }
 
 
-
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpPost]
         public ActionResult Cadastrar([FromBody] Palavra palavra)
         {
-
 
 
             if (palavra == null)
@@ -80,7 +81,8 @@ namespace _1_mimicApi_study_test.V1.Controllers
         }
 
 
-
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpGet("",Name = "ObterTodas")]
         public ActionResult<List<Palavra>> ObterTodas([FromQuery] PalavraUrlQuery query)
         {
@@ -157,9 +159,10 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
         }
 
-      
 
 
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpGet("{id}", Name = "ObterPalavra")]
         public ActionResult<Palavra> obter(int id)
         {
@@ -193,9 +196,10 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
         }
 
-    
 
 
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpPut("{id}", Name = "AtualizarPalavra")]
         public ActionResult Atualizar([FromRoute] int id, [FromBody] Palavra palavra)
         {
@@ -246,6 +250,9 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
         }
 
+
+
+        [MapToApiVersion("1.1")]
         [HttpDelete("{id}", Name = "ExcluirPalavra")]
         public ActionResult Deletar(int id)
         {

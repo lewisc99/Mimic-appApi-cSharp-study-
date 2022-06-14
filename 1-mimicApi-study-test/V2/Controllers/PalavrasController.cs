@@ -9,7 +9,7 @@ namespace _1_mimicApi_study_test.V2.Controllers
 
 
 
-    [Route("api/{version:apiVersion}/palavras")]
+    [Route("api/v{version:apiVersion}/palavras")]
     [ApiController]
     [ApiVersion("2.0")]
     public class PalavrasController: ControllerBase
