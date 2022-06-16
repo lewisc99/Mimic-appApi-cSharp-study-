@@ -39,6 +39,12 @@ namespace _1_mimicApi_study_test.V1.Controllers
         }
 
 
+
+        /// <summary>
+        /// Operação que realiza o cadastro da Palavra
+        /// </summary>
+        /// <param name="palavra">Um Objeto Palavra</param>
+        /// <returns>Retorna o objeto cadastrado</returns>
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpPost]
@@ -83,6 +89,13 @@ namespace _1_mimicApi_study_test.V1.Controllers
         }
 
 
+
+
+        /// <summary>
+        /// Operação que pega do banco de dados todas as palavras existentes
+        /// </summary>
+        /// <param name="query">Filtros de pesquisa</param>
+        /// <returns>Listagem de Palavras</returns>
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpGet("",Name = "ObterTodas")]
@@ -169,6 +182,14 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
 
 
+
+
+        /// <summary>
+        /// Operação que pega uma unica palavra da base de dados
+        /// </summary>
+        /// <param name="id">Identificar da palavra</param>
+        /// <returns>Um Objeto de Palavra</returns>
+
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpGet("{id}", Name = "ObterPalavra")]
@@ -206,6 +227,12 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
 
 
+        /// <summary>
+        /// Operação que realiza a substituição de dados de uma Palavra especifica
+        /// </summary>
+        /// <param name="id">Codigo identificador da Palavra a ser alterado</param>
+        /// <param name="palavra">Objeto Palavra com dados para alteração</param>
+        /// <returns></returns>
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpPut("{id}", Name = "AtualizarPalavra")]
@@ -259,7 +286,11 @@ namespace _1_mimicApi_study_test.V1.Controllers
         }
 
 
-
+        /// <summary>
+        /// Operação que exclui uma Palavra do sistema
+        /// </summary>
+        /// <param name="id">Código de identificação da Palavra</param>
+        /// <returns></returns>
         [MapToApiVersion("1.1")]
         [HttpDelete("{id}", Name = "ExcluirPalavra")]
         public ActionResult Deletar(int id)

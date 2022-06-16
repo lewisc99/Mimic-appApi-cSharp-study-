@@ -69,3 +69,5 @@ D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-st
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\1-mimicApi-study-test.xml
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll

@@ -13,10 +13,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -105,6 +107,12 @@ namespace _1_mimicApi_study_test
                 c.SwaggerDoc("v1.0", new OpenApiInfo
                 { Title = "MImic - API V1.0", Version = "v1.0" });
 
+                var caminhoProjeto = PlatformServices.Default.Application.ApplicationBasePath;
+                var NomeProjeto = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var caminhoArquivoXMlComentario = Path.Combine(caminhoProjeto, NomeProjeto);
+
+
+                c.IncludeXmlComments(caminhoArquivoXMlComentario);
 
 
                 c.DocInclusionPredicate((version, desc) =>
@@ -123,6 +131,8 @@ namespace _1_mimicApi_study_test
             });
 
 
+         
+            
 
 
 
