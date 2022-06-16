@@ -9,7 +9,9 @@ namespace _1_mimicApi_study_test.V2.Controllers
 
 
 
-    [Route("api/v{version:apiVersion}/palavras")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+  //  [Route("api/[controller]")]
+
     [ApiController]
     [ApiVersion("2.0")]
     public class PalavrasController: ControllerBase
@@ -17,6 +19,7 @@ namespace _1_mimicApi_study_test.V2.Controllers
 
 
         [HttpGet("",Name = "ObterTodas")]
+        [MapToApiVersion("2.0")]
         public string ObterTodas()
         {
             return "Versão 2.0";

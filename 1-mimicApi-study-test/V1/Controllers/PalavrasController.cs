@@ -17,7 +17,9 @@ namespace _1_mimicApi_study_test.V1.Controllers
 
 
     [ApiController]
-    [Route("/api/v{version:apiVersion}/[controller]")]
+   
+    [Route("api/v{version:apiVersion}/palavras")]
+    //[Route("api/[controller]")]
     [ApiVersion("1.0",Deprecated = true)]
     [ApiVersion("1.1")]
 
@@ -84,7 +86,7 @@ namespace _1_mimicApi_study_test.V1.Controllers
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpGet("",Name = "ObterTodas")]
-        public ActionResult<List<Palavra>> ObterTodas([FromQuery] PalavraUrlQuery query)
+        public ActionResult ObterTodas([FromQuery] PalavraUrlQuery? query)
         {
 
 
@@ -118,40 +120,46 @@ namespace _1_mimicApi_study_test.V1.Controllers
             }
             listaDTO.links.Add(new LinkDTO("self", Url.Link("ObterTodas", query), "GET"));
 
+
+
             if (lista.Paginacao != null)
             {
                 Response.Headers.Add("X -  Pagination ", JsonConvert.SerializeObject(lista.Paginacao));
 
-            }
 
-
-            if (query.PagNumero + 1 <= lista.Paginacao.TotalPaginas)
-            {
-                var queryString = new PalavraUrlQuery()
+                if (query.PagNumero + 1 <= lista.Paginacao.TotalPaginas)
                 {
-                    PagNumero = query.PagNumero + 1,
-                    PagRegistro = query.PagRegistro,
-                    Data = query.Data
-                };
+                    var queryString = new PalavraUrlQuery()
+                    {
+                        PagNumero = query.PagNumero + 1,
+                        PagRegistro = query.PagRegistro,
+                        Data = query.Data
+                    };
 
 
-                listaDTO.links.Add(new LinkDTO("next", Url.Link("ObterTodas", queryString),
-                    "GET"));
+                    listaDTO.links.Add(new LinkDTO("next", Url.Link("ObterTodas", queryString),
+                        "GET"));
 
-            }
+                }
 
-            if (query.PagNumero - 1 > 0)
-            {
-                var queryString = new PalavraUrlQuery()
+                if (query.PagNumero - 1 > 0)
                 {
-                    PagNumero = query.PagNumero - 1,
-                    PagRegistro = query.PagRegistro,
-                    Data = query.Data
-                };
+                    var queryString = new PalavraUrlQuery()
+                    {
+                        PagNumero = query.PagNumero - 1,
+                        PagRegistro = query.PagRegistro,
+                        Data = query.Data
+                    };
 
-                listaDTO.links.Add(new LinkDTO("previous", Url.Link("ObterTodas", queryString), "GET"));
+                    listaDTO.links.Add(new LinkDTO("previous", Url.Link("ObterTodas", queryString), "GET"));
+
+                }
+
 
             }
+
+
+         
 
 
             return Ok(listaDTO);

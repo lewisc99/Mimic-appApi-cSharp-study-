@@ -65,3 +65,7 @@ D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-st
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\obj\Debug\netcoreapp3.1\1-mimicApi-study-test.MvcApplicationPartsAssemblyInfo.cs
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\arquivos\programation\workspace-c#\old projects and test projects\mimicApi-study-test\1-mimicApi-study-test\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
