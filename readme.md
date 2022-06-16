@@ -6,13 +6,13 @@
 
 
 ## 🖼 Screenshot application screen  Versioning<br/>
-<p>V1</p><img src="images/v1.jpg">
+<p>V1</p><img src="images/v1.PNG">
 <br/>
 <br/>
-<p> V1.1</p><img src="images/v1.1.jpg">
+<p> V1.1</p><img src="images/v1.1.PNG">
 <br/>
 <br/>
-<p>V2</p><img src="images/v2.jpg">
+<p>V2</p><img src="images/v2.PNG">
 <br/>
 <br/>
 
